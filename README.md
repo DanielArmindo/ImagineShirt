@@ -1,3 +1,7 @@
+# Disclaimer
+
+This project was carried out as part of the Internet Applications course in computer engineering at the Polytechnic Institute of Leiria.
+
 # About Project
 
 The **objective** of this project is to implement a server-based Web application, using the Laravel Framework, to simulate an online store "ImagineShirt" that sells printed t-shirts.
