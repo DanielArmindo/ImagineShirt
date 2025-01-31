@@ -36,7 +36,7 @@
 <section class="pt-100 pb-150">
     <div class="container">
         <div class="row">
-            <div class="col-lg-8 m-auto">
+            <div class="col-lg-12 m-auto">
                 <div class="row">
                     <div class="tab-content dashboard-content">
                         <div class="tab-pane fade active show">
@@ -82,7 +82,7 @@
                                                             <th>Payment Ref</th>
                                                             <th>Status</th>
                                                             <th>Change To</th>
-                                                           
+
                                                         </tr>
                                                     </thead>
 

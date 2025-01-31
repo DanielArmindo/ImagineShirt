@@ -3,7 +3,6 @@
 namespace App\Http\Livewire\Admin;
 
 use App\Models\User;
-use App\Models\Order;
 
 use Livewire\Component;
 use App\Models\customer;

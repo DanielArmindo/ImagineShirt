@@ -84,9 +84,11 @@
                                     <a href="{{route('custom.product',['base'=>$base,'size'=>$size,'background'=>1])}}" type="button" class="btn btn-sm btn-outline-primary">Black Background</a>
 
                                     <div class="product-extra-link2">
-                                        <button type="button" class="button button-add-to-cart"
-                                        wire:click.prevent="store({{$code_tshirt}},'{{"1"}}','{{"$prices->unit_price_own"}}','{{"$base"}}','{{"$size"}}','{{"$images[0]"}}','{{"$background"}}')">
+                                        <form action="{{route('custom.product.add.cart', ['product_id' => $code_tshirt, 'product_qnt' => 1, 'product_price' => $prices->unit_price_own, 'color' => $base, 'size' => $size, 'image_url' => $images[0], 'background' => $background])}}" method="post">
+                                        @csrf
+                                        <button type="submit" class="button button-add-to-cart">
                                         Add to cart</button>
+                                        </form>
                                     </div>
 
                                     </div>

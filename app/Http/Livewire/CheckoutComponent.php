@@ -87,7 +87,6 @@ class CheckoutComponent extends Component
             $order->payment_type = $user->default_payment_type;
             $order->payment_ref = $user->default_payment_ref;
 
-            $order->save();
 
             //Export pdf and save it
             $temp_id = $order->id;

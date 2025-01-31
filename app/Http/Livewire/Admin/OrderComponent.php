@@ -2,7 +2,7 @@
 
 namespace App\Http\Livewire\Admin;
 
-use App\Models\Order;
+use App\Models\order;
 use Livewire\Component;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;

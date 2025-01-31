@@ -12,7 +12,7 @@ The online store "ImagineShirt" allows customers to choose images for t-shirts f
 This project used the following softwares:
 
 - **Laravel** - An open-source web application framework written in PHP. It provides a structure for developing robust and secure web applications.
-- **DataBase** - Laravel supports various database management systems like MySQL, PostgreSQL, SQLite, and SQL Server.
+- **Database** - Laravel supports various database management systems like MySQL, PostgreSQL, SQLite, and SQL Server.
 - For dependencies **npm** - The default package manager for the JavaScript ecosystem. It is used to install and manage project dependencies.
 
 **Optional Softwares**
@@ -22,6 +22,15 @@ This project used the following softwares:
 # How to run Project
 
 Laravel Folder
+
+For the correct installation of this project, it is necessary to activate the PHP extension responsible for manipulating images, namely **GD**, which is used specifically for generating user purchase reports. Activating this library may require, depending on the operating system in use, **modifying the settings in the php.ini** file or, on Linux systems, **installing additional packages**. In addition, it may be necessary to activate other PHP extensions, following the same installation and configuration procedure.
+
+Don't forget to rename the .env.example file to .env and fill in the project details as:
+
+- Variables related to database configuration **BD_{variable}**
+- **APP_URL** change to the url of the server that will be associated with the service
+- Variables related to sending emails **MAIL_{variable}**, in the development of the project **mailtrap.io** was used
+- NODE_BINARY_PATH and NPM_BINARY_PATH you need to put the path of the Javascript execution tools to generate the reports about the purchases made by users **is a mandatory component to be able to run the project**
 
 ```bash
 # Inside the LaravelAPI folder (first time)
@@ -38,6 +47,8 @@ npm run build
 php artisan serve
 ```
 
+# Reminders
+
 This project simulates an sender mail with https://mailtrap.io/, then you need to make the corresponding changes to the project's .env file
 
-**Caution** - To log-in into web application you need to go to the database and get an email address from users_table and the password for anyone is 123
+**Caution** - To log-in into web application you need to go to the database and get an email address from users table and the password for anyone is 123

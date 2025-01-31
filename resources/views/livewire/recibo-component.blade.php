@@ -5,16 +5,10 @@
     <meta charset="utf-8">
     <title>ImagineShirt</title>
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta property="og:title" content="">
-    <meta property="og:type" content="">
-    <meta property="og:url" content="">
-    <meta property="og:image" content="">
-    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('/assets/imgs/theme/favicon.ico') }}">
-    <link rel="stylesheet" href="{{ asset('/assets/css/main.css') }}">
-    <link rel="stylesheet" href="{{ asset('/assets/css/custom.css') }}">
-    @livewireStyles
+    <link rel="shortcut icon" type="image/x-icon" href="{{ public_path('/assets/imgs/theme/favicon.ico') }}">
+    <link rel="stylesheet" href="{{ public_path('/assets/css/main.css') }}">
+    <link rel="stylesheet" href="{{ public_path('/assets/css/custom.css') }}">
 </head>
 
 <body>
@@ -27,7 +21,7 @@
                             <div class="col-md-6">
                                 <div class="d-flex align-items-center">
                                     <div class="logo logo-width-1 d-block d-lg-none me-3">
-                                        <a href="/"><img src="{{ asset('/assets/imgs/logo/logo2.png') }}" alt="logo"></a>
+                                        <a href="/"><img src="{{ public_path('/assets/imgs/logo/logo2.png') }}" alt="logo"></a>
                                     </div>
 
                                 </div>
@@ -92,7 +86,7 @@
 
                                     @foreach ($order_items as $item)
                                         <tr>
-                                            <td class="image product-thumbnail"><img src="{{ $images[$loop->index] }}"
+                                            <td class="image product-thumbnail"><img src="data:image/png;base64,{{ $images[$loop->index] }}"
                                                     alt="Sem Imagem Disponivel"></td>
                                             <td>{{ $item->tshirt_imageRef->name }}</td>
                                             <td>{{ $item->unit_price }}€</td>
@@ -105,7 +99,7 @@
 
                                     @foreach ($carrinho as $item)
                                         <tr>
-                                            <td class="image product-thumbnail"><img src="{{ $item->options->image_url }}"
+                                            <td class="image product-thumbnail"><img src="data:image/png;base64,{{ $images[$loop->index] }}"
                                                     alt="Sem Imagem Disponivel"></td>
                                             <td>{{ $item->name }}</td>
                                             <td>{{ $item->price }}€</td>
@@ -129,37 +123,8 @@
                     <p class="text-end"style="font-size: 15px;">Payment Type: {{ $payment }}</p>
                 </div>
             </div>
-
     </div>
     </main>
 
-
-    <script src="{{ asset('/assets/js/vendor/modernizr-3.6.0.min.js') }}"></script>
-    <script src="{{ asset('/assets/js/vendor/jquery-3.6.0.min.js') }}"></script>
-    <script src="{{ asset('/assets/js/vendor/jquery-migrate-3.3.0.min.js') }}"></script>
-    <script src="{{ asset('/assets/js/vendor/bootstrap.bundle.min.js') }}"></script>
-    <script src="{{ asset('/assets/js/plugins/slick.js') }}"></script>
-    <script src="{{ asset('/assets/js/plugins/jquery.syotimer.min.js') }}"></script>
-    <script src="{{ asset('/assets/js/plugins/wow.js') }}"></script>
-    <script src="{{ asset('/assets/js/plugins/jquery-ui.js') }}"></script>
-    <script src="{{ asset('/assets/js/plugins/perfect-scrollbar.js') }}"></script>
-    <script src="{{ asset('/assets/js/plugins/magnific-popup.js') }}"></script>
-    <script src="{{ asset('/assets/js/plugins/select2.min.js') }}"></script>
-    <script src="{{ asset('/assets/js/plugins/waypoints.js') }}"></script>
-    <script src="{{ asset('/assets/js/plugins/counterup.js') }}"></script>
-    <script src="{{ asset('/assets/js/plugins/jquery.countdown.min.js') }}"></script>
-    <script src="{{ asset('/assets/js/plugins/images-loaded.js') }}"></script>
-    <script src="{{ asset('/assets/js/plugins/isotope.js') }}"></script>
-    <script src="{{ asset('/assets/js/plugins/scrollup.js') }}"></script>
-    <script src="{{ asset('/assets/js/plugins/jquery.vticker-min.js') }}"></script>
-    <script src="{{ asset('/assets/js/plugins/jquery.theia.sticky.js') }}"></script>
-    <script src="{{ asset('/assets/js/plugins/jquery.elevatezoom.js') }}"></script>
-    <!-- Template  JS -->
-    <script src="{{ asset('/assets/js/main.js?v=3.3') }}"></script>
-    <script src="{{ asset('/assets/js/shop.js?v=3.3') }}"></script>
-    @vite('resources/js/app.js')
-    @livewireScripts
-    @stack('scripts')
 </body>
-
 </html>

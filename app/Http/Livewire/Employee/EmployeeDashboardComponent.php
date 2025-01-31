@@ -2,7 +2,7 @@
 
 namespace App\Http\Livewire\Employee;
 
-use App\Models\Order;
+use App\Models\order;
 use Livewire\Component;
 use App\Mail\OrderClosed;
 use Illuminate\Http\Request;
